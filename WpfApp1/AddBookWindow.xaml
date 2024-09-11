@@ -1,0 +1,89 @@
+﻿<Window x:Class="LibraryManagement.AddBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Book" Height="350" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Content="Title:" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="txtTitle" VerticalAlignment="Top" Width="300" Grid.Column="1" Grid.Row="0"/>
+
+        <Label Content="Author:" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:Name="txtAuthor" VerticalAlignment="Top" Width="300"  Grid.Column="1" Grid.Row="1"/>
+
+        <Label Content="Category:" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2"/>
+        <TextBox x:Name="txtCategory" VerticalAlignment="Top" Width="300"  Grid.Column="1" Grid.Row="2"/>
+
+        <Label Content="Publisher:" VerticalAlignment="Top" Grid.Column="0" Grid.Row="3"/>
+        <TextBox x:Name="txtPublisher" VerticalAlignment="Top" Width="300"  Grid.Column="1" Grid.Row="3"/>
+
+        <Label Content="Year Published:" VerticalAlignment="Top" Grid.Column="0" Grid.Row="4"/>
+        <TextBox x:Name="txtYearPublished" VerticalAlignment="Top" Width="300"  Grid.Column="1" Grid.Row="4"/>
+
+        <Label Content="ISBN:" VerticalAlignment="Top" Grid.Column="0" Grid.Row="5"/>
+        <TextBox x:Name="txtISBN" VerticalAlignment="Top"  Width="300"  Grid.Column="1" Grid.Row="5"/>
+
+        <Button Content="Download data by ISBN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Click="DownloadDataByISBN_Click" Grid.Column="0" Grid.Row="6">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#007ACC"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#005F99"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Add_Click" Grid.Column="1" Grid.Row="6">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#4CAF50"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#388E3C"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="290,260,0,0" VerticalAlignment="Top" Width="75" Click="Cancel_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#F44336"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#D32F2F"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>
